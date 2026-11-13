@@ -35,8 +35,8 @@ SIPaKMeD contains 4,049 cropped single-cell images across these classes.
 ## Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
+git clone https://github.com/oyinkansolasj/cervical-cancer-screening-pap-smear-classifier.git
+cd cervical-cancer-screening-pap-smear-classifier
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
