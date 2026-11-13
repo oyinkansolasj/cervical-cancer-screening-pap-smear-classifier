@@ -1,0 +1,11 @@
+                          precision    recall  f1-score   support
+
+            Dyskeratotic     0.9398    0.9571    0.9483       163
+            Koilocytotic     0.9583    0.8364    0.8932       165
+             Metaplastic     0.8786    0.9560    0.9157       159
+               Parabasal     0.9630    0.9873    0.9750       158
+Superficial-Intermediate     0.9461    0.9461    0.9461       167
+
+                accuracy                         0.9360       812
+               macro avg     0.9372    0.9366    0.9357       812
+            weighted avg     0.9374    0.9360    0.9355       812

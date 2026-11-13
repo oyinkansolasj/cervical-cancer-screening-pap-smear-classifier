@@ -89,21 +89,22 @@ python predict.py path/to/cell1.bmp path/to/cell2.bmp
 
 ## Results
 
-Trained for 50 epochs on CPU (about 1.5 hours). Evaluated on the 812-image held-out test set
+Trained for 50 epochs on a Google Colab T4 GPU. Evaluated on the 812-image held-out test set
 (20% of SIPaKMeD, never seen during training or model selection):
 
-**Test accuracy: 92.6%** (macro F1 0.927)
+**Test accuracy: 93.6%** (macro F1 0.936)
 
 | Class | Precision | Recall | F1 |
 |---|---|---|---|
-| Dyskeratotic | 0.944 | 0.926 | 0.935 |
-| Koilocytotic | 0.862 | 0.873 | 0.868 |
-| Metaplastic | 0.919 | 0.931 | 0.925 |
-| Parabasal | 0.987 | 0.981 | 0.984 |
-| Superficial-Intermediate | 0.922 | 0.922 | 0.922 |
+| Dyskeratotic | 0.940 | 0.957 | 0.948 |
+| Koilocytotic | 0.958 | 0.836 | 0.893 |
+| Metaplastic | 0.879 | 0.956 | 0.916 |
+| Parabasal | 0.963 | 0.987 | 0.975 |
+| Superficial-Intermediate | 0.946 | 0.946 | 0.946 |
 
-Koilocytotic cells are the hardest class, and are most often confused with Dyskeratotic cells,
-which are also abnormal. Parabasal cells are almost always classified correctly.
+Parabasal cells are the easiest to classify (98.7% recall). Koilocytotic cells are the hardest:
+the model misses 16% of them (83.6% recall). When it does predict Koilocytotic, it is right 95.8%
+of the time, so the errors are missed cells rather than false alarms.
 
 ![Confusion matrix](output/confusion_matrix.png)
 
